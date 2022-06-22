@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 router.get('/krosh', function(req, res, next) {
     res.render('hero', {
         title: "Крош",
-        picture: "images/2875.webp",
+        picture: "images/krosh.jpg",
         desc: "Крош — весёлый и энергичный кролик мужского пола, живущий в Ромашковой Долине вместе с другими Смешариками."     
       });
 });
