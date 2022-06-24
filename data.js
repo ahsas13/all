@@ -1,32 +1,32 @@
 var data = [{
     title: 'Крош',
     nick: 'krosh',
-    avatar: 'images/krosh.jpg',
+    avatar: '/images/krosh.jpg',
     desc: 'Крош — весёлый и энергичный кролик мужского пола, живущий в Ромашковой Долине вместе с другими Смешариками.'
 },
 {
    
     title: 'Ежик',
     nick: 'ejik',
-    avatar: 'images/ejik.jpg',
+    avatar: '/images/ejik.jpg',
     desc: 'Ежик — застенчивый ёж мужского пола, живущий в стране смешариков. Любит коллекционировать кактусы и фантики от конфет. Его лучший друг — Крош.'
 },
 {
     title: 'Нюша',
     nick: 'pig',
-    avatar: 'images/pig.jpg',
+    avatar: '/images/pig.jpg',
     desc: 'Нюша — свинка-модница, одна из главных героев мультсериала «Смешарики».'
 },
 {
     title: 'Бараш',
     nick: 'barash',
-    avatar: 'images/barash.jpg',
+    avatar: '/images/barash.jpg',
     desc: 'Бараш — сентиментальный меланхоличный баран-романтик, поэт-лирик, он вздыхает и пишет стихи о печали, любви и еде.'
 },
 {
     title: 'Совунья',
     nick: 'sova',
-    avatar: 'images/sova.jpg',
+    avatar: '/images/sova.jpg',
     desc: 'Совунья — старая и мудрая сова, которая одновременно и главная спортсменка, и главный врач страны смешариков.'
 }
 ];

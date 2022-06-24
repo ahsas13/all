@@ -1,11 +1,22 @@
 var express = require('express');
 var router = express.Router();
+var Hero = require("../models/hero").Hero
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+    Hero.find({},{_id:0,title:1,nick:1},function(err,menu){
+        res.render('index', {
+                                title: 'Express',
+                                menu: menu
+                            });
+    })
+
 });
-/* Страница Кроша */
+
+module.exports = router;
+
+
+/* Страница Кроша 
 router.get('/krosh', function(req, res, next) {
     res.render('hero', {
         title: "Крош",
@@ -14,7 +25,7 @@ router.get('/krosh', function(req, res, next) {
       });
 });
 
-/* Страница Ежика */
+/* Страница Ежика 
 router.get('/ejik', function(req, res, next) {
     res.render('hero', {
         title: "Ежик",
@@ -23,7 +34,7 @@ router.get('/ejik', function(req, res, next) {
       });
 });
 
-/* Страница Нюши */
+/* Страница Нюши 
 router.get('/pig', function(req, res, next) {
     res.render('hero', {
         title: "Нюша",
@@ -32,7 +43,7 @@ router.get('/pig', function(req, res, next) {
       });
 });
 
-/* Страница Бараша */
+/* Страница Бараша 
 router.get('/barash', function(req, res, next) {
     res.render('hero', {
         title: "Бараш",
@@ -41,7 +52,7 @@ router.get('/barash', function(req, res, next) {
       });
 });
 
-/* Страница Совуньи */
+/* Страница Совуньи 
 router.get('/sova', function(req, res, next) {
     res.render('hero', {
         title: "Совунья",
@@ -49,6 +60,4 @@ router.get('/sova', function(req, res, next) {
         desc: "Совунья — старая и мудрая сова, которая одновременно и главная спортсменка, и главный врач страны смешариков."     
       });
 });
-
-
-module.exports = router;
+*/
