@@ -26,6 +26,16 @@
                 <li><a href="/heroes/barash"><img src="/images/barash.jpg" alt="Avatar Logo" style="width:50px;" class="rounded-pill">Бараш</a></li>
               </ul>
             </li>
+             <% if(typeof nav == 'object' && nav){
+              nav.forEach(function(item){
+            %>
+            <li class="nav-item">
+              <a class="nav-link" href="/heroes/<%=item.nick%>"><%=item.title%></a>
+            </li>
+            <%
+            })}
+            %>
+          </ul>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
