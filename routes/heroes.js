@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 });
 
 /* Страница героев */
-router.get('/:nick', function(req, res, next) {
+router.get('/:nick', checkAuth, function(req, res, next) {
   Hero.findOne({nick:req.params.nick}, function(err, hero){
             if(err) return next(err)
             if(!hero) return next(new Error("Нет такого героя в этой книжке"))
