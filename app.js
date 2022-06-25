@@ -27,7 +27,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'bower_components')));
 
-app.use(session({
+  app.use(session({
   secret: "Smeshariki",
   cookie:{maxAge:60*1000},
   store: MongoStore.create({mongoUrl: 'mongodb://localhost/all'})
@@ -38,6 +38,7 @@ app.use(function(req,res,next){
   next()
   })
 app.use(require("./middleware/createMenu.js"))
+app.use(require("./middleware/createUser.js"))
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

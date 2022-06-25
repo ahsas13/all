@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> <%= title %> </title>
+    <title><%= title %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -26,7 +26,7 @@
                 <li><a href="/heroes/barash"><img src="/images/barash.jpg" alt="Avatar Logo" style="width:50px;" class="rounded-pill">Бараш</a></li>
               </ul>
             </li>
-             <% if(typeof nav == 'object' && nav){
+            <% if(typeof nav == 'object' && nav){
               nav.forEach(function(item){
             %>
             <li class="nav-item">
@@ -36,10 +36,14 @@
             })}
             %>
           </ul>
-          </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <%if(user){%>
+              <form action="/logout" method="post">
+                <li><button type="submit" class="myclassbutton glyphicon glyphicon-log-out"> Logout</button></li>
+              </form>
+            <% } else { %>
+              <li><a href="/logreg"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+            <% } %>
           </ul>
         </div>
       </nav>

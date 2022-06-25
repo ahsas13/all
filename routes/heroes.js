@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var Hero = require("../models/hero").Hero
 var async = require("async")
+var checkAuth = require("./../middleware/checkAuth.js")
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
