@@ -4,11 +4,14 @@ var Hero = require("../models/hero").Hero
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Express', menu:menu, counter:req.session.counter });
-});
-
-
-
+   //Hero.find({},{_id:0,title:1,nick:1},function(err,menu){
+      req.session.greeting = "Hi!!!!"
+      res.render('index', {
+                            title: 'Express',
+                            //menu: menu,
+                            counter: req.session.counter
+                          });
+    })
 module.exports = router;
 
 

@@ -9,7 +9,6 @@ var session = require("express-session")
 var MongoStore = require('connect-mongo');
 var Hero = require("./models/hero").Hero
 
-
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var heroes = require('./routes/heroes');
@@ -29,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'bower_components')));
 
 app.use(session({
-  secret: "Smurfiki",
+  secret: "Smeshariki",
   cookie:{maxAge:60*1000},
   store: MongoStore.create({mongoUrl: 'mongodb://localhost/all'})
 }))
